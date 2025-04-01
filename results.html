@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results - PDF Test Maker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .correct {
+            background-color: #dcfce7;
+            border-left: 4px solid #22c55e;
+        }
+        .incorrect {
+            background-color: #fee2e2;
+            border-left: 4px solid #ef4444;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8 max-w-3xl">
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-bold text-gray-800 mb-2">Test Results</h1>
+                <div class="text-5xl font-bold mb-4" id="score-display">80%</div>
+                <div class="w-full bg-gray-200 rounded-full h-4 mb-6">
+                    <div id="score-bar" class="bg-blue-600 h-4 rounded-full" style="width: 80%"></div>
+                </div>
+                <p id="score-message" class="text-lg text-gray-600"></p>
+            </div>
+
+            <div id="results-container" class="space-y-4 mb-8"></div>
+
+            <div class="text-center">
+                <button id="retry-btn" class="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
+                    <i class="fas fa-redo mr-2"></i>Try Again
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
